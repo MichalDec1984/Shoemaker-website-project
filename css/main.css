@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "Rewir";
-  src: url("../fonts/rewir-master/Rewir-light/Rewir-Light.ttf") format("ttf"), url("../fonts/rewir-master/Rewir-light/Rewir-Light.otf") format("otf"), url("../fonts/rewir-master/Rewir-light/Rewir-Light.woff") format("woff"); }
+  src: url("../fonts/rewir-master/Rewir-Light/Rewir-Light.ttf") format("ttf"), url("../fonts/rewir-master/Rewir-Light/Rewir-Light.otf") format("otf"), url("../fonts/rewir-master/Rewir-Light/Rewir-Light.woff") format("woff"); }
 
 body {
   margin: 0;
@@ -162,7 +162,7 @@ header {
       font-size: 4.8rem; }
 
 #slide2 {
-  background-image: url("../images/slider2back.JPG"); }
+  background-image: url("../images/slider2back.jpg"); }
   #slide2 .slide2_text {
     color: #22b573;
     text-align: center;
@@ -176,7 +176,7 @@ header {
       text-transform: uppercase; }
 
 #slide3 {
-  background-image: url("../images/slider3back.jpg"); }
+  background-image: url("../images/slider3back.JPG"); }
   #slide3 .slide3_text {
     color: white;
     text-align: center;
