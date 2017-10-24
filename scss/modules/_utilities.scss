@@ -1,0 +1,53 @@
+//MIXINS
+@mixin sizePage($height,$width,$maxwidth,$minwidth,$maxheight, $minheight) {
+	height: $height;
+	max-height: $maxheight;
+	min-height: $minheight;
+	width: $width;
+	max-width: $maxwidth;
+	min-width: $minwidth;
+
+}
+@mixin imageProperties($image,$size,$position,$repeat) {
+	background-image: $image;
+	background-size: $size;
+	background-position: $position;
+	background-repeat: $repeat;
+}
+//EXPAND
+%marginAuto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//FONTS
+@font-face { font-family: "Lombard";
+              src:url("../fonts/lombard-master/Lombard-Regular/Lombard-regular.ttf") format("ttf"),
+              url("../fonts/lombard-master/Lombard-Regular/Lombard-regular.otf") format("otf"),
+              url("../fonts/lombard-master/Lombard-Regular/Lombard-regular.woff") format("woff");
+}
+@font-face { font-family: "Havana";
+              src:url("../fonts/havana-master/Havana-Regular/Havana-Regular.ttf") format("ttf"),
+              url("../fonts/havana-master/Havana-Regular/Havana-Regular.otf") format("otf"),
+              url("../fonts/havana-master/Havana-Regular/Havana-Regular.woff") format("woff");
+}
+@font-face { font-family: "Cyrulik";
+              src:url("../fonts/cyrulik-master/Cyrulik-Sharp/Cyrulik-Sharp.ttf") format("ttf"),
+              url("../fonts/cyrulik-master/Cyrulik-Sharp/Cyrulik-Sharp.otf") format("otf"),
+              url("../fonts/cyrulik-master/Cyrulik-Sharp/Cyrulik-Sharp.woff") format("woff");
+} 
+@font-face { font-family: "Cyrulik_Stencil";
+              src:url("../fonts/cyrulik-master/Cyrulik-Stencil/Cyrulik-Stencil.ttf") format("ttf"),
+              url("../fonts/cyrulik-master/Cyrulik-Stencil/Cyrulik-Stencil.otf") format("otf"),
+              url("../fonts/cyrulik-master/Cyrulik-Stencil/Cyrulik-Stencil.woff") format("woff");
+} 
+@font-face { font-family: "Praho";
+              src:url("../fonts/praho-master/Praho-Black/Praho-Black.ttf") format("ttf"),
+              url("../fonts/praho-master/Praho-Black/Praho-Black.otf") format("otf"),
+              url("../fonts/praho-master/Praho-Black/Praho-Black.woff") format("woff");
+} 
+@font-face { font-family: "Rewir";
+              src:url("../fonts/rewir-master/Rewir-light/Rewir-Light.ttf") format("ttf"),
+              url("../fonts/rewir-master/Rewir-light/Rewir-Light.otf") format("otf"),
+              url("../fonts/rewir-master/Rewir-light/Rewir-Light.woff") format("woff");
+} 

@@ -1,0 +1,852 @@
+@import "modules/utilities.scss";
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+    height: 100%;
+	border:none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+/*NAV*/
+.fbIconWhite {
+    @include sizePage(30px,30px,null,null,null,null);
+    @include imageProperties(url("../images/fbIconWhite.png"),contain,null,null);
+    //background-image: url("../images/fbIconWhite.png");
+   // background-size: contain;
+}
+.fbIconBlack {
+    @extend .fbIconWhite;
+    background-image: url("../images/fbIconBlack.png");
+}
+.navbar {
+	min-height: 120px;
+}
+.nav_font {
+ 	text-transform: uppercase;
+ 	font-size: 1.5rem;
+    font-family: "Rewir";
+    color: white;
+}
+.navbar-default {
+    transition: 1s;
+	.navbar-nav {
+        margin-top: 30px;
+		> li {
+
+			> a {
+				color: white;
+				//line-height: 78px;
+				&:hover {
+    				color: green;
+    			}
+    			&:focus {
+    				color: white;
+    			}
+    		}
+    	}
+    }
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px dashed green;
+	.navbar-toggle {
+  		border-color:white;
+  		&:hover {
+			background-color:transparent;
+		}
+		&:focus {
+			background-color: transparent;
+		}
+  		.icon-bar {
+    		background-color:white;
+		}
+  	}
+}
+.navbar-color {
+    transition: 1s;
+    .navbar-nav {
+      margin-top: 30px;
+        > li {
+            > a {
+                color: black;
+                //line-height: 78px;
+                &:hover {
+                    color: green;
+                    background-color: transparent;
+                }
+                &:focus {
+                    color: black;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    background-color: white;
+    border: none;
+    border-bottom: 1px dashed green;
+    .navbar-toggle {
+        border-color:none;
+        &:hover {
+            background-color:transparent;
+        }
+        &:focus {
+            background-color: transparent;
+        }
+        .icon-bar {
+            background-color:white;
+        }
+    }
+}
+.logo {
+	transform: translateX(-50%);
+ 	left: 50%;
+	position: absolute;
+}
+/*SLIDER*/
+.slider{
+	@include imageProperties(null,cover,center,no-repeat);
+    @include sizePage(100vh,100%,null,null,1000px,null);
+	//width: 100%;
+	//height: 100vh;
+    //max-height: 1000px;
+	display: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+	.container {
+		margin-top: 40vh;
+		//border: 1px solid red;
+		
+	}
+	.ArrowLeft {
+		float: left;
+		cursor: pointer;
+        position: absolute;
+        top: 60vh;
+        transform: translateY(-50%);
+        left: 10px;
+	}
+	.ArrowRight {
+		float: right;
+		cursor: pointer;
+        position: absolute;
+        top: 60vh;
+        transform: translateY(-50%);
+        right: 10px;
+	}
+}
+.visible{
+ 	display: inline-block;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+#slide1 {
+	background-image: url("../images/slider1back.JPG");
+    .slide1_text {
+        color: #c69c6d;
+        text-align: center;
+        font-size: 8.5rem;
+        font-family: "Lombard";
+        line-height: 8.5rem;
+        span {
+            font-size: 4.8rem;
+        }
+    }
+}
+#slide2{
+	background-image: url("../images/slider2back.JPG");
+    .slide2_text {
+        color: #22b573;
+        text-align: center;
+        font-size: 4.8rem;
+        #first_sentence {
+            font-family:"Havana";
+            color: #22b573;
+        }
+        #second_sentence {
+            font-family:"Cyrulik";
+            color: white;
+            text-transform: uppercase;   
+        }
+    }
+
+}
+#slide3{
+	background-image: url("../images/slider3back.jpg");
+    .slide3_text {
+        color: white;
+        text-align: center;
+        font-size: 12.8rem;
+        font-family: "Lombard";
+        line-height: 8rem;
+        span {
+            font-size: 4rem;
+            font-family:"Praho";
+            color: #c69c6d;
+        }
+    }
+}
+.arrow_down1 {
+    position: absolute;
+    top: 85%;
+    left: 47.5vw;
+    cursor: pointer;
+}
+/*ABOUTS_US_SECTION*/
+.about_us{
+    text-align: center;
+    height: 100%;
+    //max-height: 1000px;
+    border-width: 1px;
+     &:before {
+        display: block; 
+        content: " "; 
+        height: 100px; 
+        margin-top: -100px; 
+        visibility: hidden; 
+    }
+    .container {
+        .arrow_down2 {;
+            margin: 0 auto 30px auto;
+        }
+    	.first {
+    		> div {
+    			margin-top: 70px;
+    			#first_row_first_line {
+    				font-size: 21px;
+    				color: #666666;
+                    font-family: "Praho";
+    			}
+    			#first_row_second_line {
+    				font-size: 4.8rem;
+    				color: #8c6239;
+    				margin-top: 50px;
+                    font-family: "Havana";
+    			}
+    		}
+    	}
+    	.second {
+    		margin-top: 35px;
+    		p {
+    			font-size: 16px;
+    			color: #4d4d4d;
+    			margin-top: 25px;
+    			line-height: 16px;
+                font-family: "Rewir";
+    		}
+    	}
+    }
+}
+.short_green_line {
+    width: 40px;
+    height: 4px;
+    background-color: #22b573;
+    margin: 18px auto 10px;
+}
+.about_us_center_activity_section {
+    height: 250px;
+    border-left: 2px dashed green;
+    border-right: 2px dashed green;
+}
+/*EXPERTS_SECTION*/
+.experts {
+    background-color: #cccccc;
+    width: 100%;
+    height: 100%;
+    //max-height:5000px;
+    text-align: center;
+    border-top: 2px dashed green;
+    border-bottom: 2px dashed green;
+}
+.experts_image {
+    @include sizePage(14rem,14rem,null,null,null,null);
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 auto;
+}
+#experts_section_title {
+    font-family: "Praho";
+    color: #666666;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-top: 65px;
+}
+.experts_list {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .expert {
+        p {
+            font-family: "Praho";
+            font-size: 1.4rem;
+            color: #4d4d4d;
+            text-align: center;
+            height: 100px;
+            span {
+                font-family: "Praho";
+                font-size: 1.9rem;
+                color: #8c6239;
+            }
+        }
+    }
+}
+
+#Anna {
+    @include imageProperties(url("../images/anna.jpg"),cover,left top,null);
+}
+#Aleksander {
+    @include imageProperties(url("../images/aleksander.jpg"),cover,null,null);
+}
+#Piotr {
+    @extend #Anna;
+    background-image: url("../images/piotr.jpg");
+}
+#Kazimierz {
+    @extend #Anna;
+    background-image: url("../images/kazimierz.jpg");
+}
+#Marek {
+    @extend #Anna;
+    background-image: url("../images/marek.jpg");
+}
+#Zdzislaw {
+    @extend #Anna;
+    background-image: url("../images/zdzislaw.jpg");
+}
+/*FIRST_GALLERY*/
+.first_gallery {
+    //max-height: 830px;
+    @include sizePage(100%,100%,null,null,null,null)
+    text-align: center;
+     &:before {
+        display: block; 
+        content: " "; 
+        height: 100px; 
+        margin-top:-100px; 
+        visibility: hidden; 
+    }
+    #First_gallery_section_title {
+        font-family: "Praho";
+        color: #666666;
+        font-size: 21px;
+        text-transform: uppercase;
+        margin-top: 65px;
+    }
+}
+.contentContainer1 {
+    @include sizePage(220px,960px,null,null,null,null);
+    overflow: hidden;
+    margin: 40px auto;
+    position: relative;
+}
+.wrapper1 {
+    width: 4800px;
+    transform: translate3d(0, 0, 0);
+    transition: transform .5s ease-in-out;
+}
+.content {
+    float: left;
+    @include sizePage(160px,240px,null,null,null,null);
+    white-space: normal;
+    background-repeat: no-repeat;
+}
+#item1 {
+    @include imageProperties(url("../images/galeria/1.JPG"),cover,null,null);
+}
+#item2 {
+    @extend #item1;
+    background-image: url("../images/galeria/2.JPG");
+}
+#item3 {
+    @extend #item1;
+    background-image: url("../images/galeria/3.JPG");
+}
+#item4 {
+    @extend #item1;
+    background-image: url("../images/galeria/4.JPG");
+}
+#item5 {
+    @extend #item1;
+    background-image: url("../images/galeria/5.JPG");
+}
+#item6 {
+    @extend #item1;
+    background-image: url("../images/galeria/6.JPG");
+}
+#item7 {
+    @extend #item1;
+    background-image: url("../images/galeria/7.jpg");
+}
+#item8 {
+    @extend #item1;
+    background-image: url("../images/galeria/8.JPG");
+}
+#item9 {
+    @extend #item1;
+    background-image: url("../images/galeria/9.JPG");
+}
+#item10 {
+    @extend #item1;
+    background-image: url("../images/galeria/10.jpg");
+}
+#item11 {
+    @extend #item1;
+    background-image: url("../images/galeria/11.jpg");
+}
+#item12 {
+    @extend #item1;
+    background-image: url("../images/galeria/12.jpg");
+}
+#item13 {
+    @extend #item1;
+    background-image: url("../images/galeria/13.jpg");
+}
+#item14 {
+    @extend #item1;
+    background-image: url("../images/galeria/14.JPG");
+}
+#item15 {
+    @extend #item1;
+    background-image: url("../images/galeria/15.JPG");
+}
+#item16 {
+    @extend #item1;
+    background-image: url("../images/galeria/16.JPG");
+}
+#item17 {
+    @extend #item1;
+    background-image: url("../images/galeria/17.JPG");
+}
+#item18 {
+    @extend #item1;
+    background-image: url("../images/galeria/18.JPG");
+}
+#item19 {
+    @extend #item1;
+    background-image: url("../images/galeria/7.jpg");
+}
+#item20 {
+    @extend #item1;
+}
+/*SECOND_GALLERY*/
+.second_gallery {
+    //max-height: 630px;
+    height: 100%;
+    background-color: white;
+    //width: 100%;
+    text-align: center;
+    #second_gallery_section_title {
+        font-family: "Praho";
+        color: #666666;
+        font-size: 21px;
+        text-transform: uppercase;
+        margin-top: 65px;
+    }
+}
+.contentContainer2 {
+    @include sizePage(150px,960px,null,null,null,null);
+    //border: 5px black solid;
+    overflow: hidden;
+    margin: 40px auto 20px auto;
+    position: relative;
+}
+.wrapper2 {
+    @extend .wrapper1;
+    width: 3840px;
+}
+#second_gallery_item1 {
+    background-image: url("../images/galeriaII/1.JPG");
+    background-size: cover;
+}
+#second_gallery_item2 {
+    background-image: url("../images/galeriaII/2.jpg");
+    background-size: cover;
+}
+#second_gallery_item3 {
+    background-image: url("../images/galeriaII/3.jpg");
+    background-size: cover;
+}
+#second_gallery_item4 {
+    background-image: url("../images/galeriaII/4.jpg");
+    background-size: cover;;
+}
+#second_gallery_item5 {
+    background-image: url("../images/galeriaII/5.jpg");
+    background-size: cover;
+}
+#second_gallery_item6 {
+    background-image: url("../images/galeriaII/6.JPG");
+    background-size: cover;
+}
+#second_gallery_item7 {
+    background-image: url("../images/galeriaII/7.jpg");
+    background-size: cover;
+}
+#second_gallery_item8 {
+    background-image: url("../images/galeriaII/8.jpg");
+    background-size: cover;
+}
+#second_gallery_item9 {
+    background-image: url("../images/galeriaII/9.jpg");
+    background-size: cover;
+}
+#second_gallery_item10 {
+    background-image: url("../images/galeriaII/10.JPG");
+    background-size: cover;
+}
+#second_gallery_item11 {
+    background-image: url("../images/galeriaII/11.JPG");
+    background-size: cover;
+    background-position: center bottom;
+}
+#second_gallery_item12 {
+    background-image: url("../images/galeriaII/12.jpg");
+    background-size: cover;
+}
+#second_gallery_item13 {
+    background-image: url("../images/galeriaII/13.jpg");
+    background-size: cover;
+}
+#second_gallery_item14 {
+    background-image: url("../images/galeriaII/14.jpg");
+    background-size: cover;
+}
+#second_gallery_item15 {
+    background-image: url("../images/galeriaII/15.jpg");
+    background-size: cover;
+}
+#second_gallery_item16 {
+    background-image: url("../images/galeriaII/7.jpg");
+    background-size: cover;
+}
+
+.second_gallery_text {
+    font-family: "Rewir";
+    color: #333333;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+/*SHOE_CARE_SECTION*/
+.shoe_care {
+    background-color: #bce9d5;
+    text-align: left;
+    @include sizePage(100%,100%,null,null,null,null);
+    .shoe_care_title {
+        margin-top: 65px;
+        margin-bottom: 25px;
+        font-size: 21px;
+        font-family: "Praho";
+        color: #666666;
+        text-transform: uppercase;
+    }
+    .shoe_care_paragraph {
+        font-size: 16px;
+        font-family: "Rewir";
+        color: #333333;
+    }
+    #display {
+        display: none;
+    }
+    #margin {
+        margin-top:30px;
+        margin-bottom: 30px;
+    }
+}
+.shoe_care_img {
+    @include imageProperties(url("../images/proces.jpg"),cover,center,no-repeat);
+    height: 450px;
+}
+/*DOTS SLIDER*/
+.dots_slider {
+    position: relative;
+    .slider_nav_dots {
+        top: 600px;
+        position: absolute;
+        left: 22.5%;
+    }
+    .dot {
+        @include sizePage(15px,15px,null,null,null,null);
+        margin: 0 2px;
+        background-color: black;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .active {
+        background-color: white;
+    }
+    .mySlides {
+        display: none;
+    }
+    .slide_one_background {
+        text-align: center;
+        background-color: #a67c52;
+        line-height: 57px;
+        height: 100%;
+        .slider_title_border {
+            border: 2px dashed white;
+            margin-top: 60px;
+            padding-bottom: 30px;
+            height: 600px;
+        }
+        .slider_title {
+            margin-top: 80px;
+            font-family: "Cyrulik_Stencil";
+            font-size: 13.6rem;
+            color: white;
+            span {
+                font-family: "Havana";
+                font-size: 7.2rem;
+                line-height: 5.7rem;
+                color: #333333;
+            }
+        }
+        .slide_one_img {
+            @include  imageProperties(url("../images/half1.JPG"),cover, center 60%, no-repeat);
+            height: 800px;
+        }
+        .icon1 {
+            width: 150px;
+            height: 200px;
+        }  
+    }
+    .slide_two_background {
+        text-align: center;
+        background-color: #333333;
+        line-height: 57px;
+        height: 100%;
+        .slider_title_border {
+            border: 2px dashed #22b573;
+            margin-top: 60px;
+            padding-bottom: 30px;
+            height: 600px;
+        }
+        #slider_title {
+            margin-top: 80px;
+            font-family: "Havana";
+            font-size: 7.2rem;
+            color: #c69c6d;
+            margin-bottom: 0px;  
+        }
+        #slider_two_title_second_word {
+                font-family: "Praho";
+                font-size: 8.4rem;
+                color: white;
+                padding-top: 15px;
+                margin-bottom: 20px;
+            }
+        #slider_two_title_third_word {
+                font-family: "Cyrulik";
+                font-size: 5.4rem;
+                color: #c69c6d;
+                text-transform: uppercase;
+            }
+        .slide_two_img {
+            @include  imageProperties(url("../images/half2.jpg"),cover, center 60%, no-repeat);
+            height: 800px;
+        }
+        .icon2 {
+            width: 150px;
+            height: 200px;
+            margin: 0 auto;
+        }  
+    }
+    .slide_three_background {
+        text-align: center;
+        background-color: #bce9d5;
+        height: 100%;
+        .slider_title_border {
+            border: 2px dashed #22b573;
+            margin-top: 60px;
+            padding-bottom: 30px;
+            height: 600px;
+        }
+        #slider_three_title_first_word {
+            margin-top: 80px;
+            font-family: "Cyrulik";
+            font-size: 4rem;
+            color: #333333;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        #slider_three_title_second_word {
+            font-family: "Praho";
+            font-size: 3.4rem;
+            color: #333333;
+            margin-bottom: 0;
+        }
+        #slider_three_title_third_word {
+            font-family: "HAVANA";
+            font-size: 5.7rem;
+            color: #333333;
+            margin-bottom: 0;
+           
+        }
+        #slider_three_title_fourth_word {
+            font-family: "Praho";
+            font-size: 2.8rem;
+            margin-bottom: 0;
+        
+        }
+        #slider_three_title_fifth_word {
+            font-family: "Cyrulik";
+            font-size: 8.6rem;
+            color: #333333;
+            text-transform: uppercase;
+            margin-bottom: 0;
+       
+        }
+        .slide_three_img {
+            @include  imageProperties(url("../images/half3.jpg"),cover, center 60%, no-repeat);
+            height: 800px;
+        }
+        .icon3 {
+            width: 100px;
+            height: 100px;
+        }  
+
+    }
+}
+/*OTHER_PRODUCTS_SECTION*/
+.other_products {
+    background-color: #e8d7c5;
+    height: 100%;
+    //max-height: 565px;
+    text-align: center;
+    #other_products_title {
+        margin-top: 60px;
+        margin-bottom: 30px;
+        color: #666666;
+        font-size: 21px;
+        font-family: "Praho";
+    }
+    .products {
+        margin-top: 30px;
+        p {
+            color: #8c6239;
+            font-size: 21px;
+            font-family: "Praho";
+            margin-top: 15px;
+            margin-bottom: 50px;
+        }
+        #product_1 {
+            @include  imageProperties(url("../images/inne1.JPG"),cover, center, null);
+        }
+        #product_2 {
+            @extend #product_1;
+            background-image: url("../images/inne2.jpg");
+        }
+        #product_3 {
+            @extend #product_1;
+            background-image: url("../images/inne3.JPG");
+        }
+        #product_4 {
+            @extend #product_1;
+            background-image: url("../images/inne4.JPG");
+        }
+    }
+    .products_image {
+        @include sizePage(180px,180px,null,null,null,null);
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+}
+/*REFUNDATION*/
+.anchorOffset {
+    &:before {
+        display: block; 
+        content: " "; 
+        height: 100px; 
+        margin-top: -100px; 
+        visibility: hidden; 
+    }
+}
+.refundation {
+    background-color: #22b573;
+    //max-height: 900px;
+    height: 100%;
+    .refundation_title {
+        color: #333333;
+        font-size: 21px;
+        font-family: "Praho";
+        margin-top: 50px;
+        text-align: center;
+    }
+    .white_line {
+        @include sizePage(4px,40px,null,null,null,null);
+        background-color: white;
+        margin: 18px auto 50px;
+
+    }
+    .refundation_text {
+        color: #333333;
+        font-size: 2rem;
+        font-family: "Rewir";
+    }
+    ul {
+        list-style-type: none;
+        padding-left:0;
+        color: #333333;
+        font-size: 2rem;
+        font-family: "Rewir";
+    }
+    .refundation_image {
+        @include imageProperties(url("../images/refundacja.jpg"),cover,center,null);
+        @include sizePage(500px,200px,null,null,null,null);
+        margin-left: 100px;
+    }
+    .long_white_line {
+        @include sizePage(1px,45rem,null,null,null,null);
+        width: 45rem;
+        height: 1px;
+        background-color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .arrow_down2 {
+        margin: 20px auto 40px auto;  
+        width: 60px; 
+    }
+}
+/*MAP*/
+    #map {
+        @include sizePage(400px,100%,null,null,null,null);
+        background-color: grey;
+    }
+/*CONTACT*/
+.contact {
+    background-color: #333333;
+    text-align: center;
+    .contact_title {
+        color: white;
+        font-size: 21px;
+        font-family: "Praho";
+        margin-top: 50px;
+        text-transform: uppercase;
+    }
+    .contact_text {
+        color: white;
+        font-size: 2rem;
+        font-family: "Rewir";
+        line-height: 24px;
+        width: 37.5rem;
+        margin: auto;
+        text-align: left;
+    }
+    .arrowUp {
+        margin: 40px auto 20px auto;
+        width: 50px;
+        cursor: pointer;
+    }
+}
+/*BROWN LINE*/
+.brown {
+  background-color: #c69c6d;
+  @include sizePage(100px,100%,null,null,null,null);
+}
+@import "modules/media.scss";
+
+
+
